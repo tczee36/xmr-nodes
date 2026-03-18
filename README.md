@@ -23,8 +23,8 @@ This single-page application (SPA) serves as a front-facing directory interface 
 *Note: Since node availability is notoriously volatile, this dashboard does not explicitly guarantee node uptime. Always verify endpoint synchronicity natively within your wallet software.*
 
 ## License
-This project is licensed under a custom **Attribution-NonCommercial License**. 
+This project is licensed under the standard **GNU General Public License v3.0 (GPL-3.0)**. 
 
-You are entirely free to copy, modify, and distribute this codebase for your own personal or open-source non-commercial projects, provided that you give undeniable attribution back to the original author (`tczee36`).
+GPLv3 is a strong open-source copyleft license that guarantees your right to freely copy, modify, and distribute this software, provided you always include the original copyright notice (`tczee36`), distribute any modifications under the identical GPL-3.0 license, and make your modified source code fully available to all users. 
 
-If you intend to use this project, or any of its derivatives, as part of a **commercial product or service**, you must contact the author beforehand to negotiate and purchase a commercial license. See the [LICENSE](LICENSE) file for complete details.
+If you wish to embed, integrate, or use this project into a **proprietary or closed-source commercial product** (where you do not wish to publish your product's source code), you must contact the author beforehand to negotiate and purchase an alternate commercial license. See the [LICENSE](LICENSE) file for the full text.
