@@ -92,6 +92,34 @@
     }
     .tab-content { display: none; padding-top: 10px; }
     .tab-content.active { display: block; }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    .pagination button {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--line);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .pagination button:hover:not(:disabled) {
+      background: var(--line);
+    }
+    .pagination button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .pagination span {
+      display: flex;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
     .bar {
       display: flex;
       flex-wrap: wrap;
@@ -196,6 +224,7 @@
               <tr><td class="muted">Loading...</td></tr>
             </tbody>
           </table>
+          <div class="pagination" id="page-clear"></div>
         </div>
 
         <div id="content-onion" class="tab-content" role="tabpanel" aria-labelledby="tab-onion">
@@ -207,6 +236,7 @@
               <tr><td class="muted">Loading...</td></tr>
             </tbody>
           </table>
+          <div class="pagination" id="page-onion"></div>
         </div>
 
         <div id="content-i2p" class="tab-content" role="tabpanel" aria-labelledby="tab-i2p">
@@ -218,6 +248,7 @@
               <tr><td class="muted">Loading...</td></tr>
             </tbody>
           </table>
+          <div class="pagination" id="page-i2p"></div>
         </div>
       </section>
 
@@ -256,7 +287,7 @@
 
     const U = 'https://monero.fail/nodes.json';
     const $ = id => document.getElementById(id);
-    const st = { all: [] };
+    const st = { all: [], page: { clear: 1, onion: 1, i2p: 1 } };
 
     const host = u => {
       try { return new URL(u).host; }
@@ -295,6 +326,11 @@
       return out;
     }
 
+    function changePage(net, delta) {
+      st.page[net] += delta;
+      render();
+    }
+
     function render() {
       const q = $('q').value.toLowerCase().trim();
       const rows = st.all.filter(r =>
@@ -302,6 +338,8 @@
       );
 
       $('count').textContent = `${rows.length} nodes`;
+
+      const limit = 20;
 
       ['clear', 'onion', 'i2p'].forEach(n => {
         let data = rows.filter(r => r.net === n);
@@ -312,7 +350,13 @@
           data = [...pinned.map(r => ({...r, isPinned: true})), ...others];
         }
 
-        const html = data.map(r => {
+        const maxPage = Math.max(1, Math.ceil(data.length / limit));
+        if (st.page[n] > maxPage) st.page[n] = 1;
+        
+        const start = (st.page[n] - 1) * limit;
+        const pagedData = data.slice(start, start + limit);
+
+        const html = pagedData.map(r => {
           const badge = r.isPinned ? '<span class="badge">RECOMMENDED</span>' : '';
           const trClass = r.isPinned ? 'class="pinned"' : '';
           return `<tr ${trClass}><td><a target="_blank" rel="noopener" href="${r.u}">${r.u}</a>${badge}</td></tr>`;
@@ -320,10 +364,26 @@
 
         const target = $(`rows-${n}`);
         if (target) target.innerHTML = html;
+
+        const pTarget = $(`page-${n}`);
+        if (pTarget) {
+          if (data.length > limit) {
+             pTarget.innerHTML = `
+              <button onclick="changePage('${n}', -1)" ${st.page[n] === 1 ? 'disabled' : ''}>Previous</button>
+              <span>Page ${st.page[n]} of ${maxPage}</span>
+              <button onclick="changePage('${n}', 1)" ${st.page[n] === maxPage ? 'disabled' : ''}>Next</button>
+             `;
+          } else {
+             pTarget.innerHTML = '';
+          }
+        }
       });
     }
 
-    $('q').addEventListener('input', render);
+    $('q').addEventListener('input', () => {
+      st.page = { clear: 1, onion: 1, i2p: 1 };
+      render();
+    });
 
     (async () => {
       try {
