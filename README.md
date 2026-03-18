@@ -21,3 +21,10 @@ This single-page application (SPA) serves as a front-facing directory interface 
   Instead of syncing a massive blockchain locally on your own computer or smartphone, simply copy and paste a Node URL from this list directly into your wallet settings to connect immediately.
 
 *Note: Since node availability is notoriously volatile, this dashboard does not explicitly guarantee node uptime. Always verify endpoint synchronicity natively within your wallet software.*
+
+## License
+This project is licensed under a custom **Attribution-NonCommercial License**. 
+
+You are entirely free to copy, modify, and distribute this codebase for your own personal or open-source non-commercial projects, provided that you give undeniable attribution back to the original author (`tczee36`).
+
+If you intend to use this project, or any of its derivatives, as part of a **commercial product or service**, you must contact the author beforehand to negotiate and purchase a commercial license. See the [LICENSE](LICENSE) file for complete details.
