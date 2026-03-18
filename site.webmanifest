@@ -6,5 +6,11 @@
   "background_color": "#0b0f14",
   "theme_color": "#0b0f14",
   "description": "Live Monero public node list and status filters for clearnet, onion, and I2P.",
-  "icons": []
+  "icons": [
+    {
+      "src": "monero-icon.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
 }
