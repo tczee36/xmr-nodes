@@ -1,0 +1,10 @@
+{
+  "name": "XMR Node Status Dashboard",
+  "short_name": "XMR Nodes",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0f14",
+  "theme_color": "#0b0f14",
+  "description": "Live Monero public node list and status filters for clearnet, onion, and I2P.",
+  "icons": []
+}

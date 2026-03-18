@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>XMR Node Status Dashboard | Monero Public Node List (Clear, Onion, I2P)</title>
+  <meta name="description" content="Live XMR node status dashboard for Monero users. Browse and filter public Monero nodes across clearnet, Tor onion, and I2P with a fast, privacy-friendly interface." />
+  <meta name="keywords" content="XMR node status, Monero node list, Monero public nodes, onion Monero nodes, I2P Monero nodes, Monero remote node, Monero RPC nodes, Monero network dashboard" />
+  <meta name="author" content="troisowl" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="theme-color" content="#0b0f14" />
+
+  <link rel="canonical" id="canonical" href="" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/png" href="https://cdn.iconscout.com/icon/free/png-256/free-monero-icon-svg-download-png-645914.png?f=webp&w=256" />
+  <link rel="apple-touch-icon" href="https://cdn.iconscout.com/icon/free/png-256/free-monero-icon-svg-download-png-645914.png?f=webp&w=256" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="XMR Node Status Dashboard" />
+  <meta property="og:title" content="XMR Node Status Dashboard | Monero Public Node List" />
+  <meta property="og:description" content="Search and filter Monero public nodes across clearnet, onion, and I2P. Fast loading, privacy-focused, and mobile-friendly." />
+  <meta property="og:url" id="og-url" content="" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0b0f14/e6edf3&text=XMR+Node+Status" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="XMR Node Status Dashboard" />
+  <meta name="twitter:description" content="Live Monero node list and status view for clearnet, onion, and I2P." />
+  <meta name="twitter:image" content="https://dummyimage.com/1200x630/0b0f14/e6edf3&text=XMR+Node+Status" />
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --panel: #121923;
+      --line: #2a3b50;
+      --line2: #243244;
+      --text: #e6edf3;
+      --muted: #9fb0c3;
+      --link: #79c0ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+    header, section, footer { margin-bottom: 20px; }
+    h1 { margin: 8px 0; font-size: clamp(1.4rem, 2vw, 2rem); }
+    h2 { margin: 24px 0 8px; font-size: 1.1rem; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .muted { color: var(--muted); }
+    .bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin: 12px 0 14px;
+    }
+    input, select {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      min-height: 38px;
+    }
+    input { min-width: 260px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid var(--line2);
+      text-align: left;
+      font-size: 0.94rem;
+      vertical-align: top;
+      word-break: break-word;
+    }
+    nav a { margin-right: 12px; }
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0,0,0,0) !important;
+      border: 0 !important;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "XMR Node Status Dashboard",
+    "description": "Monero public node list with network filters for clearnet, onion, and I2P.",
+    "url": "https://example.github.io/",
+    "inLanguage": "en",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://example.github.io/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="muted">Monero tooling · public remote node discovery</p>
+      <h1>XMR Node Status Dashboard</h1>
+      <p>
+        Find working <strong>Monero public nodes</strong> quickly. This live dashboard helps you search and filter
+        XMR nodes by <strong>clearnet</strong>, <strong>Tor onion</strong>, and <strong>I2P</strong> network.
+      </p>
+      <nav aria-label="On-page navigation">
+        <a href="#live-table">Live Node List</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <p class="muted">
+        Source: <a target="_blank" rel="noopener" href="https://monero.fail/nodes.json">monero.fail/nodes.json</a>
+        · Last fetch: <span id="ts">loading...</span>
+      </p>
+    </header>
+
+    <main>
+      <section id="live-table" aria-labelledby="live-title">
+        <h2 id="live-title">Live Monero Node List</h2>
+        <div class="bar">
+          <label class="sr-only" for="q">Filter by URL or host</label>
+          <input id="q" placeholder="Filter URL or host" autocomplete="off" />
+
+          <label class="sr-only" for="net">Network filter</label>
+          <select id="net">
+            <option value="all">All networks</option>
+            <option value="clear">Clearnet</option>
+            <option value="onion">Onion (Tor)</option>
+            <option value="i2p">I2P</option>
+          </select>
+
+          <strong id="count" aria-live="polite">0 nodes</strong>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Network</th>
+              <th>Node URL</th>
+            </tr>
+          </thead>
+          <tbody id="rows">
+            <tr><td colspan="2" class="muted">Loading...</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About This XMR Node Status Page</h2>
+        <p>
+          This page tracks a public Monero node feed and excludes direct IP endpoints when possible,
+          helping users find host-based endpoints for better usability and privacy hygiene.
+        </p>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
+        <p><strong>What is an XMR remote node?</strong><br/>A remote node lets a Monero wallet query blockchain data without running a full local node.</p>
+        <p><strong>Does this page guarantee uptime?</strong><br/>No. Node availability changes frequently; always test before relying on an endpoint.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p class="muted">Keywords: XMR node status, Monero node list, Monero remote node, onion and I2P Monero nodes.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Dynamic canonical/OG URL for GitHub Pages forks and custom domains
+    const pageUrl = location.origin + location.pathname;
+    document.getElementById('canonical').setAttribute('href', pageUrl);
+    document.getElementById('og-url').setAttribute('content', pageUrl);
+
+    const U = 'https://monero.fail/nodes.json';
+    const $ = id => document.getElementById(id);
+    const st = { all: [] };
+
+    const host = u => {
+      try { return new URL(u).host; }
+      catch { return u.replace(/^https?:\/\//, '').split('/')[0]; }
+    };
+
+    const isIp = h => {
+      h = (h || '').trim();
+      if (/^(?:\d{1,3}\.){3}\d{1,3}(?::\d+)?$/.test(h)) return true;
+      const c = h.replace(/^\[/, '').replace(/\](:\d+)?$/, '');
+      return c.includes(':') && /^[0-9a-fA-F:]+$/.test(c);
+    };
+
+    function flatten(data) {
+      const out = [];
+      for (const net of ['clear', 'onion', 'i2p']) {
+        for (const u of (data.monero?.[net] || [])) {
+          const h = host(u);
+          if (isIp(h)) continue;
+          out.push({ net, u, h });
+        }
+      }
+      return out;
+    }
+
+    function render() {
+      const q = $('q').value.toLowerCase().trim();
+      const net = $('net').value;
+      const rows = st.all.filter(r =>
+        (net === 'all' || r.net === net) &&
+        (!q || r.u.toLowerCase().includes(q) || r.h.toLowerCase().includes(q))
+      );
+
+      $('count').textContent = `${rows.length} nodes`;
+      $('rows').innerHTML = rows.map(r =>
+        `<tr><td>${r.net}</td><td><a target="_blank" rel="noopener" href="${r.u}">${r.u}</a></td></tr>`
+      ).join('') || '<tr><td colspan="2" class="muted">No nodes found.</td></tr>';
+    }
+
+    $('q').addEventListener('input', render);
+    $('net').addEventListener('input', render);
+
+    (async () => {
+      try {
+        const res = await fetch(U, { cache: 'no-store' });
+        const json = await res.json();
+        st.all = flatten(json);
+        $('ts').textContent = new Date().toISOString();
+        render();
+      } catch (e) {
+        $('rows').innerHTML = `<tr><td colspan="2" class="muted">Fetch failed: ${e.message}</td></tr>`;
+        $('ts').textContent = 'unavailable';
+      }
+    })();
+  </script>
+</body>
+</html>
