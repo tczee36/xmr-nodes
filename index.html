@@ -244,28 +244,37 @@
         </div>
       </section>
 
-      <section id="about" aria-labelledby="about-title">
-        <h2 id="about-title">About Monero Nodes & This Directory</h2>
+      <section id="overview" aria-labelledby="overview-title">
+        <h2 id="overview-title">Overview</h2>
         <p>
-          Running your own full node is always the most secure option. However, if you need immediate wallet access or are on a mobile device, using reliable <strong>Monero public nodes</strong> is the next best choice. This page tracks a community-driven public Monero nodes feed, helping users easily connect to high-uptime <strong>Monero remote nodes</strong> while filtering out endpoints for better privacy hygiene.
+          This dashboard serves as a front-facing directory interface parsing data from community node aggregators. It allows you to quickly view, search, and filter operational Monero RPC endpoints across multiple networks without needing to run your own full node or sift through raw API JSON data.
         </p>
+        <h3>Features</h3>
+        <ul style="line-height: 1.6;">
+          <li><strong>Multi-Network Support:</strong> Organizes endpoints seamlessly across Clearnet, Tor (Onion), and I2P.</li>
+          <li><strong>Search Filtering:</strong> In-browser, instantaneous fuzzy search for node URLs or hosts.</li>
+          <li><strong>Privacy Hygiene Strategy:</strong> Actively excludes direct IP endpoints where possible to heavily encourage host-based routing.</li>
+          <li><strong>Dynamic Pagination:</strong> Easy digestion of massive endpoint datasets limited to 20 rows per visual page.</li>
+        </ul>
       </section>
 
-      <section id="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title">Frequently Asked Questions</h2>
-        <p><strong>What are Monero nodes (XMR nodes)?</strong><br/>A Monero node is a computer running the Monero software to validate and broadcast transactions. Using a <strong>Monero remote node</strong> lets a lightweight wallet query blockchain data to safely send and receive XMR without downloading the entire blockchain locally.</p>
-        <p><strong>How do I use a public Monero node?</strong><br/>Simply copy the Node URL from the list above and paste it into the "Remote Node" settings of your Monero wallet (like Cake Wallet, Monerujo, or the official GUI wallet).</p>
+      <section id="use-case" aria-labelledby="use-case-title">
+        <h2 id="use-case-title">Use Case: Why do I need a remote node?</h2>
+        <p>
+          A remote node allows lightweight wallets (like Cake Wallet, Monerujo, or the GUI wallet in simple mode) to query external Monero blockchain software for validating, dispatching, and syncing transactions.
+        </p>
+        <p>
+          Instead of syncing a massive blockchain locally on your own computer or smartphone, simply copy and paste a <strong>Monero public node</strong> URL from this list directly into your wallet settings to connect immediately.
+        </p>
+        <p class="muted" style="margin-top: 15px; font-size: 0.9em;">
+          <em>Note: Since node availability is notoriously volatile, this dashboard does not explicitly guarantee node uptime. Always verify endpoint synchronicity natively within your wallet software.</em>
+        </p>
       </section>
 
       <section id="directory-info" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line2);">
         <p>
           Find reliable and working <strong>Monero public nodes</strong> instantly. This live directory helps you discover, search, and filter active <strong>Monero nodes</strong> and <strong>XMR remote nodes</strong> across <strong>clearnet</strong>, <strong>Tor onion</strong>, and <strong>I2P</strong> networks.
         </p>
-        <nav aria-label="On-page navigation" style="margin-top: 12px;">
-          <a href="#live-table">Monero Public Nodes List</a>
-          <a href="#about">About</a>
-          <a href="#faq">FAQ</a>
-        </nav>
       </section>
     </main>
 
