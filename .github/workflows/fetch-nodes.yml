@@ -1,0 +1,30 @@
+name: Fetch Latest Nodes
+
+on:
+  schedule:
+    - cron: '15 * * * *' # Run hourly at minute 15
+  workflow_dispatch: # Allow manual triggering from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-nodes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch nodes.json from monero.fail
+        run: |
+          # Download the fresh nodes payload
+          curl -sL https://monero.fail/nodes.json -o nodes.json
+
+      - name: Commit and push tracking changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add nodes.json
+          
+          # Only commit and push if the nodes.json file actually has new differences
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update live nodes.json feed" && git push)
