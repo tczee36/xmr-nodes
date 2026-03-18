@@ -52,6 +52,19 @@
     a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .muted { color: var(--muted); }
+    .badge {
+      background: #238636;
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin-left: 10px;
+      vertical-align: middle;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .pinned { background: rgba(35, 134, 54, 0.1); }
+    h3 { margin: 24px 0 12px; font-size: 1.15rem; color: #fff; }
     .bar {
       display: flex;
       flex-wrap: wrap;
@@ -138,27 +151,36 @@
         <div class="bar">
           <label class="sr-only" for="q">Filter by URL or host</label>
           <input id="q" placeholder="Filter URL or host" autocomplete="off" />
-
-          <label class="sr-only" for="net">Network filter</label>
-          <select id="net">
-            <option value="all">All networks</option>
-            <option value="clear">Clearnet</option>
-            <option value="onion">Onion (Tor)</option>
-            <option value="i2p">I2P</option>
-          </select>
-
           <strong id="count" aria-live="polite">0 nodes</strong>
         </div>
 
+        <h3>Clearnet Nodes</h3>
         <table>
           <thead>
-            <tr>
-              <th>Network</th>
-              <th>Node URL</th>
-            </tr>
+            <tr><th>Node URL</th></tr>
           </thead>
-          <tbody id="rows">
-            <tr><td colspan="2" class="muted">Loading...</td></tr>
+          <tbody id="rows-clear">
+            <tr><td class="muted">Loading...</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Tor (Onion) Nodes</h3>
+        <table>
+          <thead>
+            <tr><th>Node URL</th></tr>
+          </thead>
+          <tbody id="rows-onion">
+            <tr><td class="muted">Loading...</td></tr>
+          </tbody>
+        </table>
+
+        <h3>I2P Nodes</h3>
+        <table>
+          <thead>
+            <tr><th>Node URL</th></tr>
+          </thead>
+          <tbody id="rows-i2p">
+            <tr><td class="muted">Loading...</td></tr>
           </tbody>
         </table>
       </section>
@@ -227,30 +249,49 @@
 
     function render() {
       const q = $('q').value.toLowerCase().trim();
-      const net = $('net').value;
       const rows = st.all.filter(r =>
-        (net === 'all' || r.net === net) &&
         (!q || r.u.toLowerCase().includes(q) || r.h.toLowerCase().includes(q))
       );
 
       $('count').textContent = `${rows.length} nodes`;
-      $('rows').innerHTML = rows.map(r =>
-        `<tr><td>${r.net}</td><td><a target="_blank" rel="noopener" href="${r.u}">${r.u}</a></td></tr>`
-      ).join('') || '<tr><td colspan="2" class="muted">No nodes found.</td></tr>';
+
+      ['clear', 'onion', 'i2p'].forEach(n => {
+        let data = rows.filter(r => r.net === n);
+        
+        if (n === 'clear') {
+          const pinned = data.filter(r => r.h.includes('xmr.support'));
+          const others = data.filter(r => !r.h.includes('xmr.support'));
+          data = [...pinned.map(r => ({...r, isPinned: true})), ...others];
+        }
+
+        const html = data.map(r => {
+          const badge = r.isPinned ? '<span class="badge">RECOMMENDED</span>' : '';
+          const trClass = r.isPinned ? 'class="pinned"' : '';
+          return `<tr ${trClass}><td><a target="_blank" rel="noopener" href="${r.u}">${r.u}</a>${badge}</td></tr>`;
+        }).join('') || `<tr><td class="muted">No nodes found.</td></tr>`;
+
+        const target = $(`rows-${n}`);
+        if (target) target.innerHTML = html;
+      });
     }
 
     $('q').addEventListener('input', render);
-    $('net').addEventListener('input', render);
 
     (async () => {
       try {
         const res = await fetch(U, { cache: 'no-store' });
         const json = await res.json();
         st.all = flatten(json);
+        if (!st.all.some(r => r.h.includes('xmr.support'))) {
+          st.all.unshift({ net: 'clear', u: 'http://xmr.support:18081', h: 'xmr.support' });
+        }
         $('ts').textContent = new Date().toISOString();
         render();
       } catch (e) {
-        $('rows').innerHTML = `<tr><td colspan="2" class="muted">Fetch failed: ${e.message}</td></tr>`;
+        ['clear', 'onion', 'i2p'].forEach(n => {
+          const elm = $(`rows-${n}`);
+          if (elm) elm.innerHTML = `<tr><td class="muted">Fetch failed: ${e.message}</td></tr>`;
+        });
         $('ts').textContent = 'unavailable';
       }
     })();
