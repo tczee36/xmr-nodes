@@ -2,7 +2,7 @@
 
 A lightning-fast, privacy-focused, and mobile-friendly web dashboard for discovering and connecting to active Monero public nodes.
 
-[![Monero Nodes](assets/img/og-image.png)](https://tczee36.github.io/xmr-nodes/)
+[![Monero Nodes](assets/img/og-image.png)](https://nodes.xmr.support/)
 
 ## Overview
 This single-page application (SPA) serves as a front-facing directory interface parsing data from community node aggregators. It allows users to quickly view, search, and filter operational Monero RPC endpoints across multiple networks without needing to run their own full node or sift through raw API JSON data.
