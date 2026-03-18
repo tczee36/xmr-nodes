@@ -518,6 +518,7 @@
         st.all = flatten(json);
         if (!st.all.some(r => r.h.includes('xmr.support'))) {
           st.all.unshift({ net: 'clear', u: 'http://xmr.support:18081', h: 'xmr.support' });
+          st.all.unshift({ net: 'clear', u: 'https://xmr.support:18089', h: 'xmr.support' });
         }
         $('ts').textContent = new Date().toISOString();
         render();
