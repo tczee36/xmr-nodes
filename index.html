@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Monero Nodes: Live Monero Public Nodes List & XMR Status</title>
-  <meta name="description" content="Find the best Monero public nodes. Live Monero nodes status dashboard. Browse and filter active XMR remote nodes across clearnet, Tor onion, and I2P networks." />
-  <meta name="keywords" content="monero nodes, monero public nodes, xmr nodes, monero remote node, monero node list, public monero node, onion monero nodes, xmr public nodes, monero rpc nodes" />
+  <title>Monero Nodes: Live XMR Public Nodes List & RPC Status</title>
+  <meta name="description" content="Discover reliable and fast Monero public nodes. Our live XMR node status dashboard helps you filter active remote nodes across clearnet, Tor onion, and I2P." />
+  <meta name="keywords" content="monero nodes, monero public nodes, xmr nodes, monero remote node, monero node list, public monero node, onion monero nodes, xmr public nodes, monero rpc nodes, xmr status" />
   <meta name="author" content="troisowl" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="theme-color" content="#0b0f14" />
+  <meta name="theme-color" content="#050505" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="fetch" href="nodes.json" crossorigin>
 
   <link rel="canonical" id="canonical" href="" />
   <link rel="manifest" href="site.webmanifest" />
-  <link rel="icon" type="image/png" href="assets/img/monero-icon.png" />
-  <link rel="apple-touch-icon" href="assets/img/monero-icon.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Monero Nodes Dashboard" />
@@ -28,144 +35,213 @@
   <meta name="twitter:image" content="https://nodes.xmr.support/assets/img/og-image.png" />
 
   <style>
-    .lang-btn {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background: var(--panel);
-      color: var(--text);
-      border: 1px solid var(--line);
-      padding: 6px 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      transition: background 0.15s;
-    }
-    .lang-btn:hover { background: var(--line); }
     :root {
-      --bg: #0b0f14;
-      --panel: #121923;
-      --line: #2a3b50;
-      --line2: #243244;
+      --bg: #050505;
+      --bg-gradient: radial-gradient(circle at top right, #111a24 0%, #050505 60%);
+      --panel: rgba(18, 25, 35, 0.5);
+      --panel-hover: rgba(25, 35, 50, 0.7);
+      --line: rgba(42, 59, 80, 0.6);
+      --line2: rgba(36, 50, 68, 0.4);
       --text: #e6edf3;
-      --muted: #9fb0c3;
-      --link: #79c0ff;
+      --muted: #8b9eb3;
+      --link: #58a6ff;
+      --accent: #f26822;
+      --accent-glow: rgba(242, 104, 34, 0.3);
+      --success: rgba(35, 134, 54, 0.2);
+      --success-border: rgba(63, 185, 80, 0.4);
+      --success-text: #3fb950;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.5;
+      line-height: 1.6;
+      min-height: 100vh;
     }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 16px; position: relative; }
-    header, section, footer { margin-bottom: 20px; }
-    h1 { margin: 8px 0; font-size: clamp(1.4rem, 2vw, 2rem); }
-    h2 { margin: 24px 0 8px; font-size: 1.1rem; }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: var(--bg-gradient);
+      z-index: -1;
+      pointer-events: none;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px; position: relative; z-index: 1; }
+    header, section, footer { margin-bottom: 30px; }
+    h1, h2, h3, th { font-family: 'Outfit', sans-serif; }
+    h1 { 
+      margin: 10px 0; 
+      font-size: clamp(2rem, 4vw, 3rem); 
+      font-weight: 700; 
+      background: linear-gradient(135deg, #fff, var(--muted)); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      letter-spacing: -0.5px;
+    }
+    h2 { 
+      margin: 30px 0 12px; 
+      font-size: 1.5rem; 
+      color: #fff; 
+      display: flex; 
+      align-items: center; 
+      gap: 10px;
+    }
+    h2::before { content: ''; display: inline-block; width: 4px; height: 1.1em; background: var(--accent); border-radius: 2px; }
+    a { color: var(--link); text-decoration: none; transition: color 0.2s ease, text-shadow 0.2s ease; }
+    a:hover { color: #fff; text-shadow: 0 0 8px rgba(88, 166, 255, 0.4); }
     .muted { color: var(--muted); }
     .badge {
-      background: #238636;
-      color: #fff;
-      padding: 2px 6px;
-      border-radius: 4px;
+      background: var(--success);
+      color: var(--success-text);
+      border: 1px solid var(--success-border);
+      padding: 3px 10px;
+      border-radius: 12px;
       font-size: 0.75rem;
-      margin-left: 10px;
+      margin-left: 12px;
       vertical-align: middle;
-      font-weight: bold;
+      font-weight: 600;
       letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 0 10px rgba(35, 134, 54, 0.1);
     }
-    .pinned { background: rgba(35, 134, 54, 0.1); }
+    .pinned { background: rgba(35, 134, 54, 0.05) !important; }
+    
     .tabs {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
-      margin-top: 15px;
+      gap: 8px;
+      margin-top: 20px;
       border-bottom: 2px solid var(--line);
+      padding-bottom: 8px;
     }
     .tab {
-      background: var(--panel);
+      background: rgba(255, 255, 255, 0.03);
       color: var(--muted);
       border: 1px solid var(--line);
-      border-bottom: none;
-      padding: 10px 18px;
+      padding: 12px 24px;
       cursor: pointer;
-      border-radius: 8px 8px 0 0;
-      font-family: inherit;
-      font-size: 0.95rem;
-      font-weight: 500;
-      transition: color 0.15s, background 0.15s;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: color 0.25s, background 0.25s, transform 0.25s, box-shadow 0.25s;
     }
-    .tab:hover { color: var(--text); background: var(--line2); }
+    .tab:hover { color: var(--text); background: rgba(255, 255, 255, 0.08); transform: translateY(-2px); }
     .tab.active {
-      background: var(--line);
+      background: var(--accent);
       color: #fff;
-      border-color: var(--line);
+      border-color: var(--accent);
+      box-shadow: 0 4px 15px var(--accent-glow);
     }
-    .tab-content { display: none; padding-top: 10px; }
+    .tab-content { display: none; padding-top: 20px; animation: fadeIn 0.4s ease-out; }
     .tab-content.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    
     .pagination {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      margin-top: 15px;
-      margin-bottom: 5px;
+      gap: 12px;
+      margin-top: 24px;
+      margin-bottom: 10px;
     }
     .pagination button {
-      background: var(--panel);
+      background: rgba(255, 255, 255, 0.05);
       color: var(--text);
       border: 1px solid var(--line);
-      padding: 6px 12px;
-      border-radius: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
       cursor: pointer;
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s;
     }
     .pagination button:hover:not(:disabled) {
-      background: var(--line);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--muted);
     }
-    .pagination button:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-    .pagination span {
-      display: flex;
-      align-items: center;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
+    .pagination button:disabled { opacity: 0.3; cursor: not-allowed; }
+    .pagination span { display: flex; align-items: center; color: var(--muted); font-size: 0.95rem; font-weight: 500; }
+    
     .bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 15px;
       align-items: center;
-      margin: 12px 0 14px;
+      margin: 20px 0;
+      background: rgba(18, 25, 35, 0.7);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
     }
     input, select {
-      background: var(--panel);
-      color: var(--text);
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 8px 10px;
-      min-height: 38px;
+      padding: 12px 16px;
+      min-height: 44px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    input { min-width: 260px; }
+    input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+    input { flex: 1; min-width: 260px; }
+    
     table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       background: var(--panel);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border: 1px solid var(--line);
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      contain: content;
     }
     th, td {
-      padding: 10px;
+      padding: 16px 20px;
       border-bottom: 1px solid var(--line2);
       text-align: left;
-      font-size: 0.94rem;
-      vertical-align: top;
+      vertical-align: middle;
       word-break: break-word;
     }
+    th {
+      background: rgba(0, 0, 0, 0.2);
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
+    tbody tr { transition: background-color 0.15s ease; }
+    tbody tr:hover { background: var(--panel-hover); }
+    tbody tr:last-child td { border-bottom: none; }
+    td a {
+      font-size: 1.15rem; /* Larger URL size */
+      font-weight: 500;
+      color: #c9d1d9;
+    }
+    td a:hover { color: #fff; }
+    
+    .lang-btn {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      border: 1px solid var(--line);
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.2s, border-color 0.2s;
+      z-index: 10;
+    }
+    .lang-btn:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-1px); border-color: var(--muted); }
+    
     nav a { margin-right: 12px; }
     .sr-only {
       position: absolute !important;
@@ -506,9 +582,13 @@
       });
     }
 
+    let _dbt;
     $('q').addEventListener('input', () => {
-      st.page = { clear: 1, onion: 1, i2p: 1 };
-      render();
+      clearTimeout(_dbt);
+      _dbt = setTimeout(() => {
+        st.page = { clear: 1, onion: 1, i2p: 1 };
+        render();
+      }, 120);
     });
 
     updateLang();
