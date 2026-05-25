@@ -54,7 +54,7 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Hiragino Sans GB', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -70,7 +70,7 @@
     }
     .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px; position: relative; z-index: 1; }
     header, section, footer { margin-bottom: 30px; }
-    h1, h2, h3, th { font-family: 'Outfit', sans-serif; }
+    h1, h2, h3, th { font-family: 'Outfit', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', 'Hiragino Sans GB', sans-serif; }
     h1 { 
       margin: 10px 0; 
       font-size: clamp(2rem, 4vw, 3rem); 
@@ -229,18 +229,57 @@
       position: absolute;
       top: 24px;
       right: 24px;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.08);
       color: var(--text);
       border: 1px solid var(--line);
-      padding: 8px 16px;
-      border-radius: 8px;
+      padding: 10px 20px;
+      border-radius: 10px;
       cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 1.05rem;
+      font-weight: 600;
       transition: background 0.2s, transform 0.2s, border-color 0.2s;
       z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .lang-btn:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-1px); border-color: var(--muted); }
+    .lang-btn:hover { background: rgba(255, 255, 255, 0.15); transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .lang-btn svg { flex-shrink: 0; }
+    
+    .donate-section {
+      text-align: center;
+      margin-top: 30px;
+      padding: 28px 20px;
+      background: rgba(18, 25, 35, 0.6);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+    .donate-section h3 { margin: 0 0 16px; font-size: 1.2rem; color: #fff; justify-content: center; display: flex; align-items: center; gap: 8px; }
+    .donate-section h3::before { display: none; }
+    .donate-qr { border-radius: 10px; max-width: 180px; height: auto; margin: 0 auto 16px; display: block; }
+    .donate-addr {
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      word-break: break-all;
+      background: rgba(0,0,0,0.3);
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--line2);
+      max-width: 520px;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      position: relative;
+    }
+    .donate-addr:hover { border-color: var(--accent); }
+    .donate-addr .copy-hint {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-top: 6px;
+      opacity: 0.6;
+    }
     
     nav a { margin-right: 12px; }
     .sr-only {
@@ -274,7 +313,10 @@
 </head>
 <body>
   <div class="wrap">
-    <button class="lang-btn" onclick="toggleLang()" id="lang-btn">中文</button>
+    <button class="lang-btn" onclick="toggleLang()" id="lang-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+      <span>中文</span>
+    </button>
     <header>
       <h1 data-i18n="title">Monero Public Nodes</h1>
     </header>
@@ -366,6 +408,15 @@
     </main>
 
     <footer style="display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 40px; padding-bottom: 20px;">
+      <div class="donate-section" id="donate">
+        <h3 data-i18n="donate_title">☕ Support This Project</h3>
+        <img class="donate-qr" src="assets/img/donate-qr.png" alt="Monero donation QR code" width="180" height="180" loading="lazy" />
+        <div class="donate-addr" onclick="copyAddr(this)" title="Click to copy">
+          85sEQjYXj59VKipYej8bciK7eNLQmekFyUPFGuJfGvTDYdKfWQZAVy6fbQDrPU9nbhSoZda19d1hmZmyVEBbnW8QLuCGGuR
+          <span class="copy-hint" data-i18n="donate_copy">Click to copy address</span>
+        </div>
+      </div>
+
       <p class="muted" style="text-align: center; font-size: 0.9em; margin: 0;">
         <span data-i18n="source">Source: </span><a target="_blank" rel="noopener" href="https://monero.fail/nodes.json">monero.fail/nodes.json</a>
         <br/><span data-i18n="last_update">Last update: </span><span id="ts">loading...</span>
@@ -429,7 +480,10 @@
         next: "Next",
         page_of: "Page {x} of {y}",
         lang_btn: "中文",
-        issues: "Report Issue / Comment"
+        issues: "Report Issue / Comment",
+        donate_title: "☕ Support This Project",
+        donate_copy: "Click to copy address",
+        donate_copied: "Copied!"
       },
       zh: {
         title: "门罗币 (Monero) 公共节点",
@@ -463,7 +517,10 @@
         next: "下一页",
         page_of: "第 {x} 页，共 {y} 页",
         lang_btn: "English",
-        issues: "报告问题 / 留言评论"
+        issues: "报告问题 / 留言评论",
+        donate_title: "☕ 支持本项目",
+        donate_copy: "点击复制地址",
+        donate_copied: "已复制！"
       }
     };
 
@@ -484,7 +541,22 @@
       document.querySelectorAll('[data-i18n-ph]').forEach(el => {
         el.placeholder = texts[el.getAttribute('data-i18n-ph')];
       });
-      $('lang-btn').textContent = texts['lang_btn'];
+      $('lang-btn').querySelector('span').textContent = texts['lang_btn'];
+    }
+
+    function copyAddr(el) {
+      const addr = '85sEQjYXj59VKipYej8bciK7eNLQmekFyUPFGuJfGvTDYdKfWQZAVy6fbQDrPU9nbhSoZda19d1hmZmyVEBbnW8QLuCGGuR';
+      navigator.clipboard.writeText(addr).then(() => {
+        const hint = el.querySelector('.copy-hint');
+        hint.textContent = i18n[lang].donate_copied;
+        hint.style.color = 'var(--success-text)';
+        hint.style.opacity = '1';
+        setTimeout(() => {
+          hint.textContent = i18n[lang].donate_copy;
+          hint.style.color = '';
+          hint.style.opacity = '';
+        }, 2000);
+      });
     }
 
     const U = 'nodes.json';

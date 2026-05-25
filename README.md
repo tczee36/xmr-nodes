@@ -22,6 +22,19 @@ This single-page application (SPA) serves as a front-facing directory interface 
 
 *Note: Since node availability is notoriously volatile, this dashboard does not explicitly guarantee node uptime. Always verify endpoint synchronicity natively within your wallet software.*
 
+## Donate
+
+If you find this project useful, consider supporting its development with Monero:
+
+<p align="center">
+  <img src="assets/img/donate-qr.png" alt="Monero Donation QR Code" width="200" />
+</p>
+
+```
+85sEQjYXj59VKipYej8bciK7eNLQmekFyUPFGuJfGvTDYdKfWQZAVy6fbQDrPU9nbhSoZda19d1hmZmyVEBbnW8QLuCGGuR
+```
+
+
 ## License
 This project is licensed under the standard **GNU General Public License v3.0 (GPL-3.0)**. 
 
