@@ -35,8 +35,8 @@
     <div>
         <strong>mainnet</strong>: 
         <a href="#mainnet-clear">clear (140)</a>
-        <a href="#mainnet-onion">onion (130)</a>
-        <a href="#mainnet-i2p">i2p (234)</a>
+        <a href="#mainnet-onion">onion (131)</a>
+        <a href="#mainnet-i2p">i2p (191)</a>
         <a href="#mainnet-cors">cors (34)</a>
     </div>
     
@@ -59,7 +59,7 @@
     <div>
         <strong>testnet</strong>: 
         <a href="#testnet-clear">clear (3)</a>
-        <a href="#testnet-onion">onion (1)</a>
+        <a href="#testnet-onion">onion (2)</a>
         <a href="#testnet-i2p">i2p (0)</a>
         <a href="#testnet-cors">cors (0)</a>
     </div>
@@ -355,9 +355,11 @@
         <li>http://node.pikasim.com:18089 (<a href="http://node.pikasim.com:18089/get_info" target="_blank">get_info</a>)</li>
         
 
-        <h2 id="mainnet-onion">Mainnet Tor Nodes (130)</h2>
+        <h2 id="mainnet-onion">Mainnet Tor Nodes (131)</h2>
         
         <li>http://moneronkvv2hu2anvcc5b4qd5y7strnc2ob6khqsrtikmhocyvjpdjyd.onion:18089 (<a href="http://moneronkvv2hu2anvcc5b4qd5y7strnc2ob6khqsrtikmhocyvjpdjyd.onion:18089/get_info" target="_blank">get_info</a>)</li>
+        
+        <li>http://moneroexnovtlp4datcwbgjznnulgm7q34wcl6r4gcvccruhkceb2xyd.onion:18089 (<a href="http://moneroexnovtlp4datcwbgjznnulgm7q34wcl6r4gcvccruhkceb2xyd.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://monerof5eqykw3hfrjmb66v7r4ft4hlilfzjw5q4huwolttutjuc5dyd.onion:18089 (<a href="http://monerof5eqykw3hfrjmb66v7r4ft4hlilfzjw5q4huwolttutjuc5dyd.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
@@ -366,8 +368,6 @@
         <li>http://plowsoffjexmxalw73tkjmf422gq6575fc7vicuu4javzn2ynnte6tyd.onion:18089 (<a href="http://plowsoffjexmxalw73tkjmf422gq6575fc7vicuu4javzn2ynnte6tyd.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://ulmlrardljg3r6urejlm6c2tikp3krvkupmdnueahmj33vl5ztez7jqd.onion:18081 (<a href="http://ulmlrardljg3r6urejlm6c2tikp3krvkupmdnueahmj33vl5ztez7jqd.onion:18081/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://ncbkcouzbqzcskr3dy26bvgzztpt7ywtjd2ly2bpv5c5zfxoht7gthad.onion:18081 (<a href="http://ncbkcouzbqzcskr3dy26bvgzztpt7ywtjd2ly2bpv5c5zfxoht7gthad.onion:18081/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://mexymskdcpunttj3kozziuw62aryumjggulew2kafk7rmvkmegrrgfyd.onion:18081 (<a href="http://mexymskdcpunttj3kozziuw62aryumjggulew2kafk7rmvkmegrrgfyd.onion:18081/get_info" target="_blank">get_info</a>)</li>
         
@@ -487,6 +487,10 @@
         
         <li>http://ysrxttwwz2z3qfczrqoxiimn4x5jodpsrckdpqf66o7q6znlr7ivyzad.onion:18089 (<a href="http://ysrxttwwz2z3qfczrqoxiimn4x5jodpsrckdpqf66o7q6znlr7ivyzad.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
+        <li>http://j7cp6h3viqpx56lbkdq6e5yeavimr437ofplp3nnq4fxwdpsnsfsbjqd.onion:18081 (<a href="http://j7cp6h3viqpx56lbkdq6e5yeavimr437ofplp3nnq4fxwdpsnsfsbjqd.onion:18081/get_info" target="_blank">get_info</a>)</li>
+        
+        <li>http://woknahuhkdag5yotwkw4shz2wrqwdwukvgpqxmsaixmc6fg3yssotjqd.onion:18089 (<a href="http://woknahuhkdag5yotwkw4shz2wrqwdwukvgpqxmsaixmc6fg3yssotjqd.onion:18089/get_info" target="_blank">get_info</a>)</li>
+        
         <li>http://fnbvtgj2bwn7qmjq2d64ywogjdpaeibtvmd5fg27cwrjm45sbqxl2lyd.onion:18089 (<a href="http://fnbvtgj2bwn7qmjq2d64ywogjdpaeibtvmd5fg27cwrjm45sbqxl2lyd.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://x3b2mtneopnalf4etnzjh6gk4ettjjfiuzrwetdcn7ywbokyjnottbqd.onion:18089 (<a href="http://x3b2mtneopnalf4etnzjh6gk4ettjjfiuzrwetdcn7ywbokyjnottbqd.onion:18089/get_info" target="_blank">get_info</a>)</li>
@@ -496,6 +500,8 @@
         <li>http://yg6k5yi4esryynvcb6nsy2x3oounjyw7p4wormmms23wqmeepg5t22qd.onion:18089 (<a href="http://yg6k5yi4esryynvcb6nsy2x3oounjyw7p4wormmms23wqmeepg5t22qd.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://xmrsurfuu5r43g76mjclvap43hmghw7ohm3vicpps3gj43wdaysyymad.onion:18081 (<a href="http://xmrsurfuu5r43g76mjclvap43hmghw7ohm3vicpps3gj43wdaysyymad.onion:18081/get_info" target="_blank">get_info</a>)</li>
+        
+        <li>http://2chk3x3x2iyreog6y2vhljpraqmwiqdmmafhiiab443t7xyfeadqfuad.onion:18089 (<a href="http://2chk3x3x2iyreog6y2vhljpraqmwiqdmmafhiiab443t7xyfeadqfuad.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://ce63k75ltdpsbk4mfsl3m3xhgj6l7ggc7wm6us5p237kghbeaevfhqqd.onion:18081 (<a href="http://ce63k75ltdpsbk4mfsl3m3xhgj6l7ggc7wm6us5p237kghbeaevfhqqd.onion:18081/get_info" target="_blank">get_info</a>)</li>
         
@@ -539,8 +545,6 @@
         
         <li>http://bvitlvg4lq22midax4tjryscl5ipvewsg6a55e45hdjgw3md234mctyd.onion:18089 (<a href="http://bvitlvg4lq22midax4tjryscl5ipvewsg6a55e45hdjgw3md234mctyd.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://gpxe4sjiobho7xamlf275sdeapifkbqout5defhbmaqvhdj3vcyde2yd.onion:18089 (<a href="http://gpxe4sjiobho7xamlf275sdeapifkbqout5defhbmaqvhdj3vcyde2yd.onion:18089/get_info" target="_blank">get_info</a>)</li>
-        
         <li>http://xkwmnylcbh4t6cfiymderdlncaxwygal2iblfx4d37xos3kwygwqooqd.onion:18089 (<a href="http://xkwmnylcbh4t6cfiymderdlncaxwygal2iblfx4d37xos3kwygwqooqd.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://vqdm6pagyju4guwxegv54f4vzqr3f3az6bkhesp6qmycviuof5gu5nyd.onion:51234 (<a href="http://vqdm6pagyju4guwxegv54f4vzqr3f3az6bkhesp6qmycviuof5gu5nyd.onion:51234/get_info" target="_blank">get_info</a>)</li>
@@ -560,8 +564,6 @@
         <li>http://4iv75ceaj2xjqne6d5d35xxk7lkcj6zdtpsbp7sq6sobp44b7txqrcid.onion:18089 (<a href="http://4iv75ceaj2xjqne6d5d35xxk7lkcj6zdtpsbp7sq6sobp44b7txqrcid.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://24outdkavkxmwldmnn4lgzfh4uz2yvbcv3mubbpkubsuab435yaqwxqd.onion:18081 (<a href="http://24outdkavkxmwldmnn4lgzfh4uz2yvbcv3mubbpkubsuab435yaqwxqd.onion:18081/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://muuy3c4gpsspzv7h6rfrm26e2cowdvyieqsz3juucjd3fxhs7hddamad.onion:18089 (<a href="http://muuy3c4gpsspzv7h6rfrm26e2cowdvyieqsz3juucjd3fxhs7hddamad.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://a6orjo6aiotog3njppja5jwnd3rexzfjiejxnojvw74p3kma45fundid.onion:18089 (<a href="http://a6orjo6aiotog3njppja5jwnd3rexzfjiejxnojvw74p3kma45fundid.onion:18089/get_info" target="_blank">get_info</a>)</li>
         
@@ -618,7 +620,7 @@
         <li>http://rfadnwjj5ptycmfgmqopxonbdrxuayz7pf6rehdaym4iaikgewjnucid.onion:18081 (<a href="http://rfadnwjj5ptycmfgmqopxonbdrxuayz7pf6rehdaym4iaikgewjnucid.onion:18081/get_info" target="_blank">get_info</a>)</li>
         
 
-        <h2 id="mainnet-i2p">Mainnet I2P Nodes (234)</h2>
+        <h2 id="mainnet-i2p">Mainnet I2P Nodes (191)</h2>
         
         <li>http://3mpt2afz2dm6c4ww4hogvjqzb3qc4zmdajvsh4kn3v2ayg4poy4q.b32.i2p:18089 (<a href="http://3mpt2afz2dm6c4ww4hogvjqzb3qc4zmdajvsh4kn3v2ayg4poy4q.b32.i2p:18089/get_info" target="_blank">get_info</a>)</li>
         
@@ -628,6 +630,10 @@
         
         <li>http://5dmhmmaff5mqkgmz4haq5w2wrgobhelrat7lvbt27okojkzbx6hq.b32.i2p (<a href="http://5dmhmmaff5mqkgmz4haq5w2wrgobhelrat7lvbt27okojkzbx6hq.b32.i2p/get_info" target="_blank">get_info</a>)</li>
         
+        <li>http://a3olfpvkva7kxfvhbqtslxfpvlzivwftuc6tvpy4mk2cvjqz2dwq.b32.i2p (<a href="http://a3olfpvkva7kxfvhbqtslxfpvlzivwftuc6tvpy4mk2cvjqz2dwq.b32.i2p/get_info" target="_blank">get_info</a>)</li>
+        
+        <li>http://a3olfpvkva7kxfvhbqtslxfpvlzivwftuc6tvpy4mk2cvjqz2dwq.b32.i2p:18081 (<a href="http://a3olfpvkva7kxfvhbqtslxfpvlzivwftuc6tvpy4mk2cvjqz2dwq.b32.i2p:18081/get_info" target="_blank">get_info</a>)</li>
+        
         <li>http://a3olfpvkva7kxfvhbqtslxfpvlzivwftuc6tvpy4mk2cvjqz2dwq.b32.i2p:18089 (<a href="http://a3olfpvkva7kxfvhbqtslxfpvlzivwftuc6tvpy4mk2cvjqz2dwq.b32.i2p:18089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://dd7tjhwwpmetn423gaeytozkv2vl2z3mfumrz37spsb6ocwt656a.b32.i2p:18089 (<a href="http://dd7tjhwwpmetn423gaeytozkv2vl2z3mfumrz37spsb6ocwt656a.b32.i2p:18089/get_info" target="_blank">get_info</a>)</li>
@@ -635,6 +641,8 @@
         <li>http://ez5nayp3v47yt57hwqpihzza6gdktiupybfb3u2huuc53swenhga.b32.i2p:18089 (<a href="http://ez5nayp3v47yt57hwqpihzza6gdktiupybfb3u2huuc53swenhga.b32.i2p:18089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://gfjmvf2khja4ccgztz7hddh6qvmpn3v4ozmxpefmeliiafcm35ka.b32.i2p:18081 (<a href="http://gfjmvf2khja4ccgztz7hddh6qvmpn3v4ozmxpefmeliiafcm35ka.b32.i2p:18081/get_info" target="_blank">get_info</a>)</li>
+        
+        <li>http://hzxw6kq4sghqxhcddudsk7xqfx7kom2bnn4unmzlir7b3xgbzckq.b32.i2p (<a href="http://hzxw6kq4sghqxhcddudsk7xqfx7kom2bnn4unmzlir7b3xgbzckq.b32.i2p/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://iaed2tjx2k3bc6kxedl6lgymqfl7lzcawhtqglzc37faq3jawyda.b32.i2p:18089 (<a href="http://iaed2tjx2k3bc6kxedl6lgymqfl7lzcawhtqglzc37faq3jawyda.b32.i2p:18089/get_info" target="_blank">get_info</a>)</li>
         
@@ -738,53 +746,9 @@
         
         <li>http://3j5wtuf3et6n5wsz3ota6iogsauvpl5uirfmln3uf7r46xra4ikq.b32.i2p:2266 (<a href="http://3j5wtuf3et6n5wsz3ota6iogsauvpl5uirfmln3uf7r46xra4ikq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://reaelnrcbqay43nqzcbbyvakb2f52fhbwkesinawdlzbt2at7haq.b32.i2p:2266 (<a href="http://reaelnrcbqay43nqzcbbyvakb2f52fhbwkesinawdlzbt2at7haq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://itglm2jr3ubufjbtawq4fg3mebd2heuoosil4yoabtla2yc5aglq.b32.i2p:2266 (<a href="http://itglm2jr3ubufjbtawq4fg3mebd2heuoosil4yoabtla2yc5aglq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://yhbth4vw6appfbgfbirftdghwp42uemcizln22w5lc6ztwc7gj4a.b32.i2p:2266 (<a href="http://yhbth4vw6appfbgfbirftdghwp42uemcizln22w5lc6ztwc7gj4a.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://j3u63cyxjffkrf6msepbbcpcki4swrfyzokljozxyumw4h2jn5vq.b32.i2p:2266 (<a href="http://j3u63cyxjffkrf6msepbbcpcki4swrfyzokljozxyumw4h2jn5vq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://qltunxbebkxl5qfqcumha5crpawlqmhheusa7wj57gbo3wnq2ysq.b32.i2p:2266 (<a href="http://qltunxbebkxl5qfqcumha5crpawlqmhheusa7wj57gbo3wnq2ysq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://y22fgsgkydwstc2wrzbkj2oqceirz2t2fpoqnl6yhqls5uedntoa.b32.i2p:2266 (<a href="http://y22fgsgkydwstc2wrzbkj2oqceirz2t2fpoqnl6yhqls5uedntoa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://fv5nylxgjmauevi7inxmx4hffa7iayl7ufztnontdosizqta6s5a.b32.i2p:2266 (<a href="http://fv5nylxgjmauevi7inxmx4hffa7iayl7ufztnontdosizqta6s5a.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://mwxejhfaehzmpy7w7apufofswgk4nfvf6h5yrv3ux5jwhjqg5djq.b32.i2p:2266 (<a href="http://mwxejhfaehzmpy7w7apufofswgk4nfvf6h5yrv3ux5jwhjqg5djq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://sqifqy4c3qhf37m4kstef5nqm4vg42z65nbdeycw4wxiim7p6seq.b32.i2p:2266 (<a href="http://sqifqy4c3qhf37m4kstef5nqm4vg42z65nbdeycw4wxiim7p6seq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://ynvg23u73kdlqzwxrjfhfk3tzupxydvmjxgupoz3xgdpcfmr4jxq.b32.i2p:2266 (<a href="http://ynvg23u73kdlqzwxrjfhfk3tzupxydvmjxgupoz3xgdpcfmr4jxq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://hltc4p5s2jzzfe4pykttev2tm74jpq23a73o3bvnbfftaanfdpsa.b32.i2p:2266 (<a href="http://hltc4p5s2jzzfe4pykttev2tm74jpq23a73o3bvnbfftaanfdpsa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://z5dyzaqslkrnhb33gbqd5vsygg4nopucqfhnrjzsx5mwgaeetjoa.b32.i2p:2266 (<a href="http://z5dyzaqslkrnhb33gbqd5vsygg4nopucqfhnrjzsx5mwgaeetjoa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://p5paibj74sjm2my4m7zge2mzr4pncdkk4xwypxvtppn6r5kr5fvq.b32.i2p:2266 (<a href="http://p5paibj74sjm2my4m7zge2mzr4pncdkk4xwypxvtppn6r5kr5fvq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://jg46dtxxx2yiq5z5lffkb3fh7h3ssxwhzoleh2anu45d5gvnbyka.b32.i2p:2266 (<a href="http://jg46dtxxx2yiq5z5lffkb3fh7h3ssxwhzoleh2anu45d5gvnbyka.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://qf3ylij3exsydwmrd6kmpz5qdpqyxv6ajttggr2eo4kytkilgyaa.b32.i2p:2266 (<a href="http://qf3ylij3exsydwmrd6kmpz5qdpqyxv6ajttggr2eo4kytkilgyaa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://pfv2mfiiccdsdl3662qfzib5qry2tvk6qxpf3vbhs4sfqir5nd3q.b32.i2p:2266 (<a href="http://pfv2mfiiccdsdl3662qfzib5qry2tvk6qxpf3vbhs4sfqir5nd3q.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://5pnuxtjkwfx63ujhcwodfyyx2hdo6puje5idyindfb3v6rbgkh2q.b32.i2p:2266 (<a href="http://5pnuxtjkwfx63ujhcwodfyyx2hdo6puje5idyindfb3v6rbgkh2q.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://lbsav5hrcm3u2jele6pcjaxvecoszx5c3kzrzxl3jqarca2ffvja.b32.i2p:2266 (<a href="http://lbsav5hrcm3u2jele6pcjaxvecoszx5c3kzrzxl3jqarca2ffvja.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://kn4wut3emweuyc32wtjqulc36akwc2esdrb4ej5gkqfukrsp6egq.b32.i2p:2266 (<a href="http://kn4wut3emweuyc32wtjqulc36akwc2esdrb4ej5gkqfukrsp6egq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://6bcijlvg72nta2cad7fcajlxrffdrk5hub3q2hbzecwny6del6yq.b32.i2p:2266 (<a href="http://6bcijlvg72nta2cad7fcajlxrffdrk5hub3q2hbzecwny6del6yq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
         <li>http://h6epu7wsx7h5n7tpswg6zowdy5a4iqukdn3siaz3vu7gnahnbdpq.b32.i2p:2266 (<a href="http://h6epu7wsx7h5n7tpswg6zowdy5a4iqukdn3siaz3vu7gnahnbdpq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://dnprvbkkqn532mwzzlwmzg7vbcgn67obdfbandg7m7ko7matpcha.b32.i2p:2266 (<a href="http://dnprvbkkqn532mwzzlwmzg7vbcgn67obdfbandg7m7ko7matpcha.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://fxvuomomolpkoe75ec6ws77pfdbk5sskxeldaqc5wdelovuknxjq.b32.i2p:2266 (<a href="http://fxvuomomolpkoe75ec6ws77pfdbk5sskxeldaqc5wdelovuknxjq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://owm3dreq2tqrioriuykvm3gm4qo4p56cq7hni66ojgwshwsidsba.b32.i2p:2266 (<a href="http://owm3dreq2tqrioriuykvm3gm4qo4p56cq7hni66ojgwshwsidsba.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://tpij77eltorcljfxs5ipskfrav46t7kmqh6cn5nhch567c3kfrla.b32.i2p:2266 (<a href="http://tpij77eltorcljfxs5ipskfrav46t7kmqh6cn5nhch567c3kfrla.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
@@ -796,35 +760,13 @@
         
         <li>http://w3i7davvx5dvilznbmj4tiowdpu4vjv62d3sesm2uxb3zzrn2bmq.b32.i2p:2266 (<a href="http://w3i7davvx5dvilznbmj4tiowdpu4vjv62d3sesm2uxb3zzrn2bmq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://sorroxacaskgqi55xvwzcrlbtxuph5ckllbfma7yu53y5wn6wl2q.b32.i2p:2266 (<a href="http://sorroxacaskgqi55xvwzcrlbtxuph5ckllbfma7yu53y5wn6wl2q.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
         <li>http://ztwivttuxyoc4bshpxg76hgdv7gadw2cm2bej4bnecvf3f2gkcvq.b32.i2p:2266 (<a href="http://ztwivttuxyoc4bshpxg76hgdv7gadw2cm2bej4bnecvf3f2gkcvq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
+        
+        <li>http://tdkccgu7jy6hw4uskzyvkn5spzh3exvznnerjqpztkvvfuk46jrq.b32.i2p:2266 (<a href="http://tdkccgu7jy6hw4uskzyvkn5spzh3exvznnerjqpztkvvfuk46jrq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://zyaizmrbrahvix3dnp47zh5zuxsv44v3qyp376jglxjhfjtpddiq.b32.i2p:2266 (<a href="http://zyaizmrbrahvix3dnp47zh5zuxsv44v3qyp376jglxjhfjtpddiq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://lazp6aelrywp6orfabcewq6obiozshqmdmzbvefm7hoafj6i3r7q.b32.i2p:2266 (<a href="http://lazp6aelrywp6orfabcewq6obiozshqmdmzbvefm7hoafj6i3r7q.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://jjhiwm5ak5skqicrzdi5in4ictadyhc4eyxix5vr3uaivu3tvssa.b32.i2p:2266 (<a href="http://jjhiwm5ak5skqicrzdi5in4ictadyhc4eyxix5vr3uaivu3tvssa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://weeyfpr4xz6cptflroxl7vgoaipci6nu6s6bav4n2qtxwnkrg4lq.b32.i2p:2266 (<a href="http://weeyfpr4xz6cptflroxl7vgoaipci6nu6s6bav4n2qtxwnkrg4lq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://us6qznlnnxzrjafwm2ctlmvifime4hjl7afrkphcqfqv3aerl5sa.b32.i2p:2266 (<a href="http://us6qznlnnxzrjafwm2ctlmvifime4hjl7afrkphcqfqv3aerl5sa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://7ijmolh7h4gjuyarq5zvxq55s4v7qqazjzohpeqqvn5ne5r5clza.b32.i2p:2266 (<a href="http://7ijmolh7h4gjuyarq5zvxq55s4v7qqazjzohpeqqvn5ne5r5clza.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://lwnxhcljjld72tyog65ykxj7izdqdttwvir2qq3xa4de2gkq6tsq.b32.i2p:2266 (<a href="http://lwnxhcljjld72tyog65ykxj7izdqdttwvir2qq3xa4de2gkq6tsq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://afo2haoz27yz5kxa42zelvgjpq34p27rqvddeu6bifautj6cmvpq.b32.i2p:2266 (<a href="http://afo2haoz27yz5kxa42zelvgjpq34p27rqvddeu6bifautj6cmvpq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://6rzshxwejuwb4kg6siwrjg7yf2zdphcdcpacv6ldtolazovdcqsq.b32.i2p:2266 (<a href="http://6rzshxwejuwb4kg6siwrjg7yf2zdphcdcpacv6ldtolazovdcqsq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://6jh33k7xqw5bq7jtugnqb2hjan4vp5yhhcc3iaykimpzlr4geiza.b32.i2p:2266 (<a href="http://6jh33k7xqw5bq7jtugnqb2hjan4vp5yhhcc3iaykimpzlr4geiza.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://ys6jtlncbepzffoeeeh362woh7gcnpqbiawoqw4nfxawdydxayia.b32.i2p:2266 (<a href="http://ys6jtlncbepzffoeeeh362woh7gcnpqbiawoqw4nfxawdydxayia.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
         <li>http://xwgxoub7jgq2exxczbgqmuqd4jqsqbvgozvhpyaeoyovyosgofkq.b32.i2p:2266 (<a href="http://xwgxoub7jgq2exxczbgqmuqd4jqsqbvgozvhpyaeoyovyosgofkq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://o6m5bhnlyuvcoe577xgcteeyi3m6uqfp6rqywbkfahh4pohqnlrq.b32.i2p:2266 (<a href="http://o6m5bhnlyuvcoe577xgcteeyi3m6uqfp6rqywbkfahh4pohqnlrq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://ykmr5ln2hizgwifortxeyln3brveacufxu24uy57he3ljnkbqtdq.b32.i2p:2266 (<a href="http://ykmr5ln2hizgwifortxeyln3brveacufxu24uy57he3ljnkbqtdq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
@@ -832,51 +774,25 @@
         
         <li>http://jz6thupgtxj3ybyise36xy7u5ub3u7lirgctgaxdovovmanfjxyq.b32.i2p:2266 (<a href="http://jz6thupgtxj3ybyise36xy7u5ub3u7lirgctgaxdovovmanfjxyq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://fd4qz7nnspqw3axfg6onwmkxf6cb6lv3a5ranuvafi5o3gnnzpya.b32.i2p:2266 (<a href="http://fd4qz7nnspqw3axfg6onwmkxf6cb6lv3a5ranuvafi5o3gnnzpya.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
+        <li>http://lfsmxzntb45dx6kgjzckrxpc7zs4w7g4j4kibe6hhxgp3h5vvr6a.b32.i2p:2266 (<a href="http://lfsmxzntb45dx6kgjzckrxpc7zs4w7g4j4kibe6hhxgp3h5vvr6a.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://4yr252nzt3zl7n6syh2avhh3xcdvjfyavh5imlsvktdomdbh6uqa.b32.i2p:2266 (<a href="http://4yr252nzt3zl7n6syh2avhh3xcdvjfyavh5imlsvktdomdbh6uqa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
+        <li>http://z3fzq4jvspgjvn4ytkt24vhuwzc36yyipvezzkm5qyvmbwzmrysa.b32.i2p:2266 (<a href="http://z3fzq4jvspgjvn4ytkt24vhuwzc36yyipvezzkm5qyvmbwzmrysa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://7624ajsqpjex5yua65pmazqykf37reiybqyg2dapazmzikciqxca.b32.i2p:2266 (<a href="http://7624ajsqpjex5yua65pmazqykf37reiybqyg2dapazmzikciqxca.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
+        <li>http://ig644jjmwdk6ngomq66bdr76ewdgzln4vtpenlv4ba4ewozvcm7a.b32.i2p:2266 (<a href="http://ig644jjmwdk6ngomq66bdr76ewdgzln4vtpenlv4ba4ewozvcm7a.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://etbv3fenflgc2tloy72wj3k6nkh6w6gn7f7p76pqzyjjt36drfjq.b32.i2p:2266 (<a href="http://etbv3fenflgc2tloy72wj3k6nkh6w6gn7f7p76pqzyjjt36drfjq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
+        <li>http://zgn4qawrbwznqj24335b4b3e6sfy6ctzlz3a6rtvlf2dffznphxq.b32.i2p:2266 (<a href="http://zgn4qawrbwznqj24335b4b3e6sfy6ctzlz3a6rtvlf2dffznphxq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://37hjs7n2n7sylvfy6t46jcxawxygti6ae4qpeg5dmg66xnntnr7q.b32.i2p:2266 (<a href="http://37hjs7n2n7sylvfy6t46jcxawxygti6ae4qpeg5dmg66xnntnr7q.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
+        <li>http://hurot6xgoksstduz2kkvofdx5otl5t43j6oclrfsbj6nkwwgmvwq.b32.i2p:2266 (<a href="http://hurot6xgoksstduz2kkvofdx5otl5t43j6oclrfsbj6nkwwgmvwq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://ghtlfxtyo5xvwbmtl4zt6lujsk5hyahw4yfdbcyzrum7poakrsoa.b32.i2p:2266 (<a href="http://ghtlfxtyo5xvwbmtl4zt6lujsk5hyahw4yfdbcyzrum7poakrsoa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://xw2i2vyjmou4j5h3tb35hjsjcyqeef57lzkye4wo7u4ct55uz6ya.b32.i2p:2266 (<a href="http://xw2i2vyjmou4j5h3tb35hjsjcyqeef57lzkye4wo7u4ct55uz6ya.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
+        <li>http://besgsykbe25nttemazde6meoybqrbzuiyjp4tiffxc5exczdjama.b32.i2p:2266 (<a href="http://besgsykbe25nttemazde6meoybqrbzuiyjp4tiffxc5exczdjama.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://ihgmrneegtjdflmqz2qbcmzsaraq33tn27zl4vnqpz4pdcivjukq.b32.i2p:2266 (<a href="http://ihgmrneegtjdflmqz2qbcmzsaraq33tn27zl4vnqpz4pdcivjukq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://hyzgjawqzgb3lk2scio6enja5n77zmaxdhwwq7pxadbx56ywbmpa.b32.i2p:2266 (<a href="http://hyzgjawqzgb3lk2scio6enja5n77zmaxdhwwq7pxadbx56ywbmpa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
         <li>http://ul2cjpfqcx6wvq5e4efdntqjndefxj6fzeumhg4ybydccum6v24q.b32.i2p:2266 (<a href="http://ul2cjpfqcx6wvq5e4efdntqjndefxj6fzeumhg4ybydccum6v24q.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://bgfj7fpi6crxqwgugpgi6u6k5f65m4xxntpj4uklvgzbiga6oskq.b32.i2p:2266 (<a href="http://bgfj7fpi6crxqwgugpgi6u6k5f65m4xxntpj4uklvgzbiga6oskq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://pypqbsj2xyumgkm2gzuksmg3up2x7i6wrtm324bu5at2uty65zka.b32.i2p:2266 (<a href="http://pypqbsj2xyumgkm2gzuksmg3up2x7i6wrtm324bu5at2uty65zka.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
-        <li>http://zvvryrm3a5lj4ojswzc4xw5dq5twsdr7xe6bugbbvwa2e4yisgka.b32.i2p:2266 (<a href="http://zvvryrm3a5lj4ojswzc4xw5dq5twsdr7xe6bugbbvwa2e4yisgka.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://ltri4ett4q22shvboe3afok5aod27d3ep7uukgbjj77mvcuclova.b32.i2p:2266 (<a href="http://ltri4ett4q22shvboe3afok5aod27d3ep7uukgbjj77mvcuclova.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://wbelavvfc5jxaw6735jq2ecsxrlcbb7mxzvzvcgudzpbdnjnuyeq.b32.i2p:2266 (<a href="http://wbelavvfc5jxaw6735jq2ecsxrlcbb7mxzvzvcgudzpbdnjnuyeq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://evjlt5po5vom4izyyxugupgehxtuebu5s4krrpeksjhhab7c3kvq.b32.i2p:2266 (<a href="http://evjlt5po5vom4izyyxugupgehxtuebu5s4krrpeksjhhab7c3kvq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://sikkd4nl2milwpisuun47kn54jbcewxfzlzmhvr4acxotoi7h3xa.b32.i2p:2266 (<a href="http://sikkd4nl2milwpisuun47kn54jbcewxfzlzmhvr4acxotoi7h3xa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://uhn5e35d74tjsatzqvcw6vskrpm5uakxurrjwpsrrswdjngavaua.b32.i2p:2266 (<a href="http://uhn5e35d74tjsatzqvcw6vskrpm5uakxurrjwpsrrswdjngavaua.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://3lc4cwf3qgllcctod42725qwhc2xqdmluxdeu4hg6zc3qzopfmmq.b32.i2p:2266 (<a href="http://3lc4cwf3qgllcctod42725qwhc2xqdmluxdeu4hg6zc3qzopfmmq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://hffrov5ok66szpkwdgay7dbfq4quzjxhwjoraejunap2w2v2jisa.b32.i2p:2266 (<a href="http://hffrov5ok66szpkwdgay7dbfq4quzjxhwjoraejunap2w2v2jisa.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://kkztqpyaqgd2eevklqtqroed3to7nva3pkqqqtm6gcp7lafc6cqq.b32.i2p:2266 (<a href="http://kkztqpyaqgd2eevklqtqroed3to7nva3pkqqqtm6gcp7lafc6cqq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://dnot5o3jta6ear47tm36wd77bqz6kiq2wd4vst3lprvwf5s6cq3a.b32.i2p:2266 (<a href="http://dnot5o3jta6ear47tm36wd77bqz6kiq2wd4vst3lprvwf5s6cq3a.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
-        
-        <li>http://jhwa5s6nrdimn7g6wuz3y33aedptfx4xnmyonljnvxxyoadvsnla.b32.i2p:2266 (<a href="http://jhwa5s6nrdimn7g6wuz3y33aedptfx4xnmyonljnvxxyoadvsnla.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
+        <li>http://5gae4jfx35q6ryiaxsvmvrebypmyvoyi5zdfgpe4h5n5ycbupkiq.b32.i2p:2266 (<a href="http://5gae4jfx35q6ryiaxsvmvrebypmyvoyi5zdfgpe4h5n5ycbupkiq.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://mouzhcpfboctkrmjgbxjznxbxrjuljkaszgpynlxtnfvx54vga3q.b32.i2p:2266 (<a href="http://mouzhcpfboctkrmjgbxjznxbxrjuljkaszgpynlxtnfvx54vga3q.b32.i2p:2266/get_info" target="_blank">get_info</a>)</li>
         
@@ -1211,7 +1127,9 @@
         <li>https://test.monero.raubritter.org (<a href="https://test.monero.raubritter.org/get_info" target="_blank">get_info</a>)</li>
         
 
-        <h2 id="testnet-onion">Testnet Tor Nodes (1)</h2>
+        <h2 id="testnet-onion">Testnet Tor Nodes (2)</h2>
+        
+        <li>http://plowsoffjexmxalw73tkjmf422gq6575fc7vicuu4javzn2ynnte6tyd.onion:28089 (<a href="http://plowsoffjexmxalw73tkjmf422gq6575fc7vicuu4javzn2ynnte6tyd.onion:28089/get_info" target="_blank">get_info</a>)</li>
         
         <li>http://lgyssws2oary5iclgvcwhwl6c65azwugvskf3iidelo2tzk4wpwblead.onion:28089 (<a href="http://lgyssws2oary5iclgvcwhwl6c65azwugvskf3iidelo2tzk4wpwblead.onion:28089/get_info" target="_blank">get_info</a>)</li>
         
